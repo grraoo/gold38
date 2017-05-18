@@ -3,7 +3,10 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
- 
+var gcmq = require('gulp-group-css-media-queries');
+var cleanCSS = require('gulp-clean-css');
+
+
 var config = {
 	src: 'src/',
 	dest: 'build/',
@@ -50,9 +53,11 @@ gulp.task('build', function() {
   return gulp.src(config.src + config.css.src)
     .pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
-            browsers: ['last 10 versions'],
-            cascade: false
-        }))
+			browsers: ['last 10 versions'],
+			cascade: false
+		}))
+		.pipe(gcmq())
+		.pipe(cleanCSS())
 		.pipe(gulp.dest(config.dest + config.css.dest))
 
 		.pipe(browserSync.reload({

@@ -502,4 +502,18 @@
     display: none;
   }
 
+
+body {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+.container {
+  @include wrapper();
+  height: 100vh;
+}
+
+
 }
