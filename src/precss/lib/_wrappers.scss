@@ -2,7 +2,18 @@
 body {
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
+
+.intro .container {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .55)),
+    url('../img/bg-intro.jpg');
+  background-size: cover;
+  color: $c-white;
+  
+}
+
 
 *, *::before, *::after {
   box-sizing: inherit;
@@ -18,4 +29,30 @@ body {
 .products {
   @include row-flex();
   justify-content: space-around;
+}
+
+.intro-header {
+  padding: 15px;
+}
+
+.contacts {
+  text-align: center;
+
+  .phone {
+    color: $c-white;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .address {
+    font-size: 12px;
+  }
+}
+
+.intro-footer {
+  margin-top: 70px;
+  text-align: center;
+  &__copy {
+    font-size: 8px;
+  }
 }

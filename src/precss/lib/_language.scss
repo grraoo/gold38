@@ -30,6 +30,13 @@
       bottom: 100%;
       right: 1em;
     }
+
+    &--intro {
+      position: static;
+      display: block;
+      opacity: 1;
+      pointer-events: all;
+    }
   }
   &__current {
     align-self: flex-end;
@@ -60,7 +67,14 @@
       filter: none;
     }
   }
-  
+
+  &--intro {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+
+
+  } 
   
 
 }
