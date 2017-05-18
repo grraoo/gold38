@@ -1,0 +1,17 @@
+.main-logo {
+  @include col();
+  @include col-6();
+  display: flex;
+  align-items: center;
+
+  &__img {
+    width: 44px;
+    margin-right: 8px;
+  }
+
+  &__headline {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+    color: #fff;
+  }
+}

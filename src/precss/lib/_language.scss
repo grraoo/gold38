@@ -1,0 +1,54 @@
+.language {
+  @include col();
+  @include col-3();
+
+  display: flex;
+  justify-content: flex-end;
+
+  &__list {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    list-style: none;
+    padding: 1em;
+    margin: 0;
+    margin-top: .5em;
+    background-color: white;
+    box-shadow: 0 0 5px gray;
+    top: 100%;
+    right: 0;
+    transition-duration: .3s;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 10px solid white;
+      border-top-width: 0;
+      border-right-color: transparent;
+      border-left-color: transparent;
+      bottom: 100%;
+      right: 1em;
+    }
+  }
+  &__current {
+    align-self: flex-end;
+    position: relative;
+
+  }
+  
+  &__flag {
+    filter: grayscale(.3);
+    transition-duration: .2s;
+    &:hover {
+      filter: none;
+    }
+  }
+  
+  &:hover &__list {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+}

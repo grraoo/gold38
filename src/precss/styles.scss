@@ -1,19 +1,19 @@
-@import 'lib/project', 'lib/mixins' , 'lib/smart-grid';
-@include normalize();
+@import 'lib/project', 'lib/mixins';
 @include font-face();
+@include normalize();
+
 
 body {
-  
   box-sizing: border-box;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
-
-
+@import 'lib/smart-grid';
 .container {
   @include wrapper();
-  background-color: red;
   height: 100vh;
 }
+
+@import 'lib/main-header', 'lib/main-logo', 'lib/language';

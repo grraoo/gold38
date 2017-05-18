@@ -1,0 +1,8 @@
+.main-header {
+  background-color: #ca1122;
+  @include row-flex();
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
