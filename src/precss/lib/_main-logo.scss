@@ -1,8 +1,9 @@
 .main-logo {
   @include col();
-  @include col-6();
+  @include col-7();
   display: flex;
   align-items: center;
+  text-decoration: none;
 
   &__img {
     width: 44px;

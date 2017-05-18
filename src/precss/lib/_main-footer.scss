@@ -1,0 +1,14 @@
+.main-footer {
+  background-color: $c-lava;
+  @include row-flex();
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+  &__link {
+    font-size: 18px;
+    color: $c-white;
+    text-decoration: none;
+  }
+}

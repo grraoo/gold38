@@ -40,15 +40,27 @@
   &__flag {
     filter: grayscale(.3);
     transition-duration: .2s;
+    width: 40px;
+    height: 24px;
+    background-image: url('../img/rus.png');
+    background-size: cover;
+    border: none;
+    outline: none;
+    &--btn {
+      &:focus {
+        outline: 1px solid $c-white;
+       & + .language__list {
+          display: block;
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
     &:hover {
       filter: none;
     }
   }
   
-  &:hover &__list {
-    display: block;
-    opacity: 1;
-    pointer-events: all;
-  }
+  
 
 }
