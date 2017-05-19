@@ -14,17 +14,33 @@
     margin-bottom: 10px;
   }
 
-  &__articul {
+  &__vendor {
     font-size: 9px;
+    margin: 1em 0;
   }
 
   &__title {
     font-size: 12px;
     font-weight: 400;
+
+    &--large {
+      font-size: 14px;
+    }
   }
 
   &__price {
     color: $c-lava;
+    display: block;
     font-size: 12px;
+    margin-bottom: 3vh;
+    margin-top: 1vh;
+
+    &--large {
+      font-size: 16px;
+    }
+  }
+
+  &--large {
+    @include col-12;
   }
 }
