@@ -1,18 +1,16 @@
-
 body {
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 .intro {
+
   .container {
     background-image: $lg-transparent-dark, url('../img/bg-intro.jpg');
     background-size: cover;
     color: $c-white;
   }
 }
-
 
 * {
   box-sizing: inherit;

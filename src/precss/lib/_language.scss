@@ -9,14 +9,14 @@
     box-shadow: 0 0 5px $c-gray;
     list-style: none;
     margin: 0;
-    margin-top: .5em;
+    margin-top: 0.5em;
     opacity: 0;
     padding: 1em;
     pointer-events: none;
     position: absolute;
     right: 0;
     top: 100%;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 
     &::before {
       border: 10px solid $c-white;
@@ -45,30 +45,38 @@
   }
 
   &__flag {
-    background-image: url('../img/rus.png');
-    background-size: cover;
-    border: 0;
-    filter: grayscale(.3);
+    filter: grayscale(0.3);
     height: 24px;
     outline: none;
-    transition-duration: .2s;
+    transition-duration: 0.2s;
     width: 40px;
-
-    &--btn {
-
-      &:focus {
-        outline: 1px solid $c-white;
-
-        & + .language__list {
-          display: block;
-          opacity: 1;
-          pointer-events: all;
-        }
-      }
-    }
 
     &:hover {
       filter: none;
+    }
+  }
+
+  &__btn {
+
+    background-size: cover;
+    border: 0;
+    height: 24px;
+    outline: none;
+    transition-duration: 0.2s;
+    width: 40px;
+
+    &--rus {
+      background-image: url('../img/rus.png');
+    }
+
+    &:focus {
+      outline: 1px solid $c-white;
+
+      &+.language__list {
+        display: block;
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
 
