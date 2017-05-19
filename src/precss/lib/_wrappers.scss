@@ -5,29 +5,42 @@ body {
 
 }
 
-.intro .container {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .55)),
-    url('../img/bg-intro.jpg');
-  background-size: cover;
-  color: $c-white;
-  
-}
-
-
-*, *::before, *::after {
-  box-sizing: inherit;
-  &:focus {
-    outline: 1px dotted gray;
+.intro {
+  .container {
+    background-image: $lg-transparent-dark, url('../img/bg-intro.jpg');
+    background-size: cover;
+    color: $c-white;
   }
 }
+
+
+* {
+  box-sizing: inherit;
+
+  &:focus {
+    outline: 1px dotted $c-gray;
+  }
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+
+    &:focus {
+      outline: 1px dotted $c-gray;
+    }
+  }
+}
+
 .container {
-  @include wrapper();
-  height: 100vh;
+  @include wrapper;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
 }
 
 .products {
-  @include row-flex();
+  @include row-flex;
   justify-content: space-around;
 }
 
@@ -50,9 +63,11 @@ body {
 }
 
 .intro-footer {
-  margin-top: 70px;
+  margin-top: auto;
   text-align: center;
+
   &__copy {
     font-size: 8px;
+    padding: 2em;
   }
 }

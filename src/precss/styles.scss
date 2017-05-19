@@ -1,5 +1,5 @@
 @import 'lib/project', 'lib/mixins', 'lib/smart-grid';
-@include font-face();
-@include normalize();
+@include font-face;
+@include normalize;
 
 @import 'lib/wrappers', 'lib/main-header', 'lib/main-logo', 'lib/language', 'lib/language-intro', 'lib/product', 'lib/main-footer';

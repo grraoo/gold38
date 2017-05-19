@@ -1,10 +1,10 @@
 .main-header {
-  background-color: $c-lava;
-  @include row-flex();
-  padding-top: 15px;
-  padding-bottom: 15px;
+  @include row-flex;
   align-items: flex-start;
+  background-color: $c-lava;
   justify-content: space-between;
+  padding-bottom: 15px;
+  padding-top: 15px;
 
   &--intro {
     background-color: transparent;
