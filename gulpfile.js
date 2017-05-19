@@ -5,8 +5,6 @@ var sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 var gcmq = require('gulp-group-css-media-queries');
 var cleanCSS = require('gulp-clean-css');
-var sassLint = require('gulp-sass-lint');
-
 
 var config = {
 	src: 'src/',
@@ -52,21 +50,6 @@ gulp.task('browserSync', function() {
 gulp.task('build', function() {
 
   return gulp.src(config.src + config.css.src)
-		.pipe(sassLint({
-      options: {
-        formatter: 'stylish'
-      },
-			files: {ignore: ['**/_smart-grid.scss', '**/_mixins.scss']},
-      rules: {
-        'no-ids': 1,
-        'class-name-format': 0,
-				'variable-name-format': 0,
-				'nesting-depth' : 0
-      },
-      configFile: '.sass-lint.yml'
-    }))
-			.pipe(sassLint.format())
-			.pipe(sassLint.failOnError())
     .pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 10 versions'],
