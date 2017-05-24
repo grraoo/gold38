@@ -1,14 +1,15 @@
 body {
   box-sizing: border-box;
+
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .intro {
 
   .container {
+    color: $c-white;
     background-image: $lg-transparent-dark, url('../img/bg-intro.jpg');
     background-size: cover;
-    color: $c-white;
   }
 }
 
@@ -30,11 +31,14 @@ body {
 }
 
 .container {
-  @include wrapper;
+  position: relative;
+
   display: flex;
   flex-direction: column;
+
   min-height: 100vh;
-  position: relative;
+
+  @include wrapper;
 }
 
 .products {
@@ -50,9 +54,11 @@ body {
   text-align: center;
 
   .phone {
-    color: $c-white;
-    font-size: 15px;
     text-decoration: none;
+
+    color: $c-white;
+
+    font-size: 15px;
   }
 
   .address {
@@ -62,10 +68,12 @@ body {
 
 .intro-footer {
   margin-top: auto;
+
   text-align: center;
 
   &__copy {
-    font-size: 8px;
     padding: 2em;
+
+    font-size: 8px;
   }
 }

@@ -1,18 +1,21 @@
 .main-logo {
+  display: flex;
+
+  text-decoration: none;
+
   @include col;
   @include col-7;
   align-items: center;
-  display: flex;
-  text-decoration: none;
 
   &__img {
+    width: 44px;
     height: auto;
     margin-right: 8px;
-    width: 44px;
   }
 
   &__headline {
     color: $c-white;
+
     font-family: 'Times New Roman', Times, serif;
     font-size: 13px;
   }

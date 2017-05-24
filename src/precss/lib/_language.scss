@@ -1,55 +1,70 @@
 .language {
+  display: flex;
+
   @include col;
   @include col-3;
-  display: flex;
   justify-content: flex-end;
 
   &__list {
-    background-color: $c-white;
-    box-shadow: 0 0 5px $c-gray;
-    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+
     margin: 0;
     margin-top: 0.5em;
-    opacity: 0;
     padding: 1em;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
+
+    list-style: none;
+
     transition-duration: 0.3s;
+    pointer-events: none;
+
+    opacity: 0;
+    background-color: $c-white;
+    box-shadow: 0 0 5px $c-gray;
 
     &::before {
-      border: 10px solid $c-white;
-      border-left-color: transparent;
-      border-right-color: transparent;
-      border-top-width: 0;
-      bottom: 100%;
-      content: '';
-      height: 0;
       position: absolute;
       right: 1em;
+      bottom: 100%;
+
       width: 0;
+      height: 0;
+
+      content: '';
+
+      border: 10px solid $c-white;
+      border-top-width: 0;
+      border-right-color: transparent;
+      border-left-color: transparent;
     }
 
     &--intro {
-      display: block;
-      opacity: 1;
-      pointer-events: all;
       position: static;
+
+      display: block;
+
+      pointer-events: all;
+
+      opacity: 1;
     }
   }
 
   &__current {
-    align-self: flex-end;
     position: relative;
+
+    align-self: flex-end;
   }
 
   &__flag {
-    filter: grayscale(0.3);
-    height: 24px;
-    outline: none;
-    transition-duration: 0.2s;
     width: 40px;
+    height: 24px;
+
+    transition-duration: 0.2s;
+
+    outline: none;
+
+    filter: grayscale(0.3);
 
     &:hover {
       filter: none;
@@ -57,13 +72,14 @@
   }
 
   &__btn {
-
-    background-size: cover;
-    border: 0;
-    height: 24px;
-    outline: none;
-    transition-duration: 0.2s;
     width: 40px;
+    height: 24px;
+
+    transition-duration: 0.2s;
+
+    border: 0;
+    outline: none;
+    background-size: cover;
 
     &--rus {
       background-image: url('../img/rus.png');
@@ -74,8 +90,10 @@
 
       &+.language__list {
         display: block;
-        opacity: 1;
+
         pointer-events: all;
+
+        opacity: 1;
       }
     }
   }
